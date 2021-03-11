@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Shermlock.woff";
+  src: url("./assets/Shermlock.woff") format("woff");
+}
+@font-face {
+  font-family: "ShermolockOpen.woff";
+  src: url("./assets/ShermlockOpen.woff") format("woff");
+}
+@font-face {
+    font-family: "Gaegu-regular.woff";
+    src: url(./assets/Gaegu-Regular.woff) format("woff");
+}
+body{
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #fdb827;
+}
+.container2 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #21209c;
+}
+.headline {
+    font-family: "Shermlock.woff";
+    font-size: 10rem;
+    color: #fdb827;
+    -webkit-text-stroke: 5px #f1f1f1;
+    margin: 0 auto;
+    text-align: center;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+.dog {
+    position: absolute;
+    width: 15rem;
+    top: 2rem;
+    right: 20rem;
+    display: none;
+}
+.dog.active {
+    display: flex;
+}
+.hw {
+    position: absolute;
+    width: 25rem;
+    top: 30rem;
+    left: 20rem;
+    display: none;
+}
+.hw.active {
+    display: flex;
+}
+.what {
+    font-family: "Shermlock.woff";
+    font-size: 3rem;
+    margin: 2rem auto;
+    text-align: center;
+    color: white;
+    margin: 1.5rem auto;
+    width: 60%;
+    border: 3px dashed whitesmoke;
+    border-radius: 30px;
+}
+/* intro page */
+.trashcan {
+    position: absolute;
+    display: flex;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+}
+.trashcan.inactive{
+    display: none;
+}
+.trashcan:hover {
+    cursor: pointer;
+}
+.intro {
+    position: absolute;
+    display: none;
+    text-align: left;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    font-family: "Gaegu-regular.woff";
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 80%;
+    left: calc(50% - 43%);
+    color: #21209c;
+    background-color: white;
+}
+.intro.active {
+  display: flex;
+}
+.where {
+    position: relative;
+    display: none;
+    font-family: "Gaegu-regular.woff";
+    font-size: 6rem;
+    word-wrap: break-word;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #21209c;
+}
+.where.active {
+    display: flex;
+    z-index: 99;
+}
+
+@media only screen and (min-width: 376px) {
+    .headline {
+        width: 80%;
+        font-family: "Shermlock.woff";
+        font-size: 15rem;
+        color: #fdb827;
+        -webkit-text-stroke: 5px #f1f1f1;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .dog {
+        position: absolute;
+        width: 15rem;
+        top: 2rem;
+        right: 20rem;
+        display: none;
+    }
+    .dog.active {
+        display: flex;
+    }
+    .hw {
+        position: absolute;
+        width: 25rem;
+        top: 30rem;
+        left: 20rem;
+        display: none;
+    }
+    .hw.active {
+        display: flex;
+    }
+    .what {
+        font-family: "Shermlock.woff";
+        font-size: 12rem;
+        text-align: center;
+        color: white;
+        margin: 2rem auto;
+        width: 60%;
+        border: 3px dashed whitesmoke;
+        border-radius: 50px;
+    }
+    .what:hover {
+        background-color: white;
+        color: #fdb827;
+    }
+    .trashcan {
+        width: 8rem;
+        left: 80rem;
+        top: 37rem;
+    }
+    .trashcan.inactive{
+        display: none;
+    }
+    .trashcan:hover {
+        cursor: pointer;
+    }
+    .intro {
+        position: absolute;
+        display: none;
+        text-align: left;
+        margin: 2rem auto;
+        padding: 2rem;
+        font-family: "Gaegu-regular.woff";
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 60%;
+        left: calc(50% - 30%);
+        color: #21209c;
+        background-color: white;
+    }
+    .intro.active {
+        display: flex;
+    }
+    .where {
+        position: relative;
+        display: none;
+        font-family: "Gaegu-regular.woff";
+        font-size: 10rem;
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        background-color: #21209c;
+    }
+    .where.active {
+        display: flex;
+        z-index: 99;
+    }
+}
+
+
+/* animation classes */
+.disappear {
+    animation: disappear 8s ease-out 10s 1 forwards;
+}
+
+@keyframes disappear {
+    from{opacity: 1;}
+    to{opacity: 0;
+    z-index: 1;
+    }
+}
