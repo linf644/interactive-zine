@@ -10,6 +10,10 @@
     font-family: "Gaegu-regular.woff";
     src: url(./assets/Gaegu-Regular.woff) format("woff");
 }
+@font-face {
+    font-family: "Gaegu-bold.woff";
+    src: url(./assets/Gaegu-Bold.woff) format("woff");
+}
 body{
     margin: 0;
 }
@@ -29,6 +33,15 @@ a {
     overflow-y: scroll;
     background-color: #21209c;
 }
+/* first page */
+.home {
+    display: flex;
+    font-family: "Gaegu-bold.woff";
+    font-size: 2rem;
+    color: white;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
 .headline {
     font-family: "Shermlock.woff";
     font-size: 10rem;
@@ -41,9 +54,9 @@ a {
 }
 .dog {
     position: absolute;
-    width: 15rem;
-    top: 2rem;
-    right: 20rem;
+    width: 10rem;
+    top: 10rem;
+    right: 2rem;
     display: none;
 }
 .dog.active {
@@ -51,9 +64,9 @@ a {
 }
 .hw {
     position: absolute;
-    width: 25rem;
-    top: 30rem;
-    left: 20rem;
+    width: 15rem;
+    top: 35rem;
+    left: 5rem;
     display: none;
 }
 .hw.active {
@@ -71,6 +84,7 @@ a {
     border-radius: 30px;
 }
 /* intro page */
+
 .trashcan {
     position: absolute;
     display: flex;
@@ -120,8 +134,107 @@ a {
     display: flex;
     z-index: 99;
 }
+/* history page */
+.return {
+    display: flex;
+    font-family: "Gaegu-bold.woff";
+    font-size: 2rem;
+    color: white;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.shapeswrapper {
+    margin-top: 0;
+    margin-left: -2rem;
+}
+.origin {
+    width: 26rem;
+}
+.popularization {
+    margin-top: -2rem;
+    margin-left: -0.5rem;
+    width: 27rem;
+}
+.culture {
+    margin-top: -2rem;
+    width: 28rem;
+}
+.origincontent {
+    display: none;
+    position: absolute;
+    top: 25rem;
+    left: 1rem;
+    font-family: "Gaegu-regular.woff";
+    background-color: whitesmoke;
+    width: 70%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    box-shadow: 15px 15px 11px 0px rgba(67,67,67,0.65);
+}
+.origincontent h4 {
+    font-size: 1.5rem;
+}
+.origincontent p{
+    font-size: 1rem;
+}
+.origincontent.active {
+    display: block;
+}
+.popularizationcontent {
+    display: none;
+    position: absolute;
+    top: 45rem;
+    left: 1rem;
+    font-family: "Gaegu-regular.woff";
+    background-color: whitesmoke;
+    width: 40%;
+    width: 70%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    box-shadow: 15px 15px 11px 0px rgba(67,67,67,0.65);
+}
+.popularizationcontent h4 {
+    font-size: 1.8rem;
+}
+.popularizationcontent p{
+    font-size: 1.2rem;
+}
+.popularizationcontent.active {
+    display: block;
+}
+.culturecontent {
+    display: none;
+    position: absolute;
+    top: 65rem;
+    left: 1rem;
+    font-family: "Gaegu-regular.woff";
+    background-color: whitesmoke;
+    width: 70%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    box-shadow: 15px 15px 11px 0px rgba(67,67,67,0.65);
+}
+.culturecontent h4 {
+    font-size: 1.8rem;
+}
+.culturecontent p{
+    font-size: 1.2rem;
+}
+.culturecontent.active {
+    display: block;
+}
 
 @media only screen and (min-width: 376px) {
+    .home {
+        font-size: 4rem;
+    }
+    .home:hover {
+        text-align: center;
+        width: 11rem;
+        background-color: white;
+        color: #fdb827;
+        border-radius: 20px;
+    }
     .headline {
         width: 80%;
         font-family: "Shermlock.woff";
@@ -211,6 +324,72 @@ a {
         display: flex;
         z-index: 99;
     }
+    .shapeswrapper {
+        margin: 0 auto
+    }
+    .origin {
+        width: 42rem;
+    }
+    .popularization {
+        width: 40rem;
+    }
+    .culture {
+        margin-top: -15rem;
+        margin-left: 18rem;
+        width: 50rem;
+    }
+    .origincontent {
+        position: absolute;
+        width: 40%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-shadow: 15px 15px 11px 0px rgba(67,67,67,0.65);
+    }
+    .origincontent h4 {
+        font-size: 2rem;
+    }
+    .origincontent p{
+        font-size: 1.5rem;
+    }
+    .popularizationcontent {
+        width: 40%;
+        top: 25rem;
+        left: 40rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .popularizationcontent h4 {
+        font-size: 2rem;
+    }
+    .popularizationcontent p{
+        font-size: 1.5rem;
+    }
+    .culturecontent {
+        display: none;
+        position: absolute;
+        top: 50rem;
+        left: 40rem;
+        width: 40%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .culturecontent h4 {
+        font-size: 2rem;
+    }
+    .culturecontent p{
+        font-size: 1.5rem;
+    }
+
+    .return {
+        font-size: 4rem;
+    }
+    .return:hover {
+        text-align: center;
+        width: 11rem;
+        background-color: white;
+        color: #21209c;
+        border-radius: 20px;
+    }
 }
 
 
@@ -225,3 +404,7 @@ a {
     z-index: 1;
     }
 }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 60% }
+  }
